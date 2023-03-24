@@ -20,6 +20,10 @@
     min-width: 100%;
   }
   
+  #mobile {
+    display: none;
+  }
+  
   .container {
     position: relative;
   
@@ -34,7 +38,6 @@
     gap: 20px;
   
     padding-left: 40px;
-    
   }
   
   a, li {
@@ -73,15 +76,28 @@
 
   @media (max-width: 600px) {
 
-    #player {
-      position: fixed;
-      width: 100%;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  #player {
+    display: none;
   }
+
+  #mobile {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-position: center;
+  }
+  header {
+    position: fixed;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    padding-top: 280px;
+    padding-bottom: 180px;
+    background-color: black;
+  }
+}
   
